@@ -1,3 +1,5 @@
+//Keep this code as is.
+
 #include "delay.h"
 
 // Nothing to do here
@@ -23,3 +25,6 @@ void mock_delay(int duration)
 }
 
 #endif
+
+
+//Keep this code as is.
