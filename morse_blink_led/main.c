@@ -18,8 +18,4 @@ int main()
     morse_blink_led(morseOutput);
 
     return 0;
-}
- 
-
- // hello
- 
+} 
