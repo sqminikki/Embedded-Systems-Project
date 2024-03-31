@@ -22,6 +22,10 @@ const char *char_to_morse(char c)
     {
         return morseCode[c - '0' + 26];
     }
+    else if (c >='A' && c <= 'Z')
+    {
+        return morseCode[c - 'A'];
+    }
     else
     {
         return ""; // Return empty string for other characters
@@ -32,10 +36,27 @@ const char *char_to_morse(char c)
 // Use the delimiter / for any spaces between words
 void translate_to_morse(const char *text, char *morseOutput, int morseOutputSize)
 {
-    // Loop through the text to convert each
-    // charactor to morse code.
-    // char_to_morse function is provided above but may not
-    // handle all cases.
+    // Loop through the text to convert each charactor to morse code. charactor 
+    // char_to_morse function is provided above but may not handle all cases.
+
+    for(int i = 0; i < strlen(text); i++)
+    {
+        if(text[i] == ' ')
+        {
+            strcat(morseOutput, "/"); //Add space between words
+        }
+        else
+        {
+            char *morse = char_to_morse(text[i]); //Gets morse code for each character.
+            strcat(morseOutput, char_to_morse(text[i]));
+            morseOutputSize = i; //Size of the morseOutput
+        }
+    }
+
+    for(int i = 0; i < strlen(morseOutput); i++)
+    {
+        printf("%c", morseOutput[i]); //Prints morseOutput to the console.
+    }
 }
 
 void morse_blink_led(const char *morseCode)
