@@ -8,6 +8,13 @@
 // 3.) set the led to low
 
 // Write code to enable led
+
+int DUO_LED = 25; //Initialize the GPIO pin for the LED
+int wiringXValidGPIO(DUO_LED); //checks if the GPIO pin is valid
+
+char *wiringXPIPlatform(void)
+//peepee poopoo
+
 void initialize_led()
 {
     // Code to initialize gpio port for LED
