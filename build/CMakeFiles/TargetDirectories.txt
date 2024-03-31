@@ -1,0 +1,3 @@
+/mnt/c/Users/major/Desktop/Embedded Systems Projects/Embedded-Systems-Project/build/CMakeFiles/test.dir
+/mnt/c/Users/major/Desktop/Embedded Systems Projects/Embedded-Systems-Project/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/major/Desktop/Embedded Systems Projects/Embedded-Systems-Project/build/CMakeFiles/rebuild_cache.dir

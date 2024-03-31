@@ -49,12 +49,8 @@ void translate_to_morse(const char *text, char *morseOutput, int morseOutputSize
             morseOutputSize = i; // Get the size of the morseOutput
         }
     }
-
-    for(int i = 0; i < strlen(morseOutput); i++) //temporarily using printf to watch the output
-    {
-        printf("%c", morseOutput[i], morseOutputSize); // Print the morseOutput to the console
-    }
-    
+        printf(morseOutput, morseOutputSize); // Print the morseOutput to the console
+        
     // Loop through the text to convert each
     // charactor to morse code.
     // char_to_morse function is provided above but may not
