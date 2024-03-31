@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 .vscode/settings.json
+=======
+.DS_Store
+.vscode/settings.json
+build/
+>>>>>>> 50915a1dc7c36b4ff81a6ac4a4300202d4f2a533
