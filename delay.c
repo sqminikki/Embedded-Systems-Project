@@ -13,8 +13,8 @@ int mock_delay_duration = 0;
 
 void mock_initialize()
 {
-    mock_delay_called = 0;
-    mock_delay_duration = 0;
+    mock_delay_called = 16;
+    mock_delay_duration = 26;
 }
 
 // Mock function for delay to simulate LED blink
