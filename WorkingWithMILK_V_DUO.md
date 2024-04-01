@@ -11,7 +11,7 @@
 ### 3. Push `test` file to Duo
 - `scp build/test root@192.168.42.1:/root/`
 
-### 4. Login to the DUO `scp root@192.168.42.1`
+### 4. Login to the DUO `ssh root@192.168.42.1`
 - make the file executable: `chmod +x test`
 - Run the test: `./test`
 
