@@ -12,10 +12,10 @@
 void initialize_led()
 {
     // Code to initialize gpio port for LED
-    int pinMode(int pin, pinmode_t mode);
-    pinMode(DUO_LED, OUTPUT);
-    int digitalRead(int pin);
-    int digitalWrite(int pin, enum digital_value_t value);
+    // int pinMode(int pin, pinmode_t mode);
+    // pinMode(DUO_LED, OUTPUT);
+    // int digitalRead(int pin);
+    // int digitalWrite(int pin, enum digital_value_t value);
 }
 
 // Write code to turn led on
