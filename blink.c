@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include "blink.h"
-#include "wiringx.h"
+// #include "wiringx.h"
 
 // Fill in the three functions to
 // 1.) enable the output mode for onboard LED
