@@ -1,10 +1,9 @@
-char *wiringXPlatform(void);
+char *wiringXPlatform(void); // Returns the platform name
 
-int DUO_LED = 25; //If 25 doesn't work, try 24...
-int wiringXValidGPIO(DUO_LED); 
+int wiringXValidGPIO(int pin); // Check if the GPIO pin is valid
 
-int wiringXSetup(char "duo", NULL);
+int wiringXSetup(char *name, ...); //Initialize the wiringx library
 
-void delayMicroseconds(unsigned int ms)
+void delayMicroseconds(unsigned int ms); //Delay in microseconds
 
-int wiringXGC(void);
+int wiringXGC(void); //Releases the GPIO pins

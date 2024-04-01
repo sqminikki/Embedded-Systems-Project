@@ -27,3 +27,9 @@ void turn_off_led();
 #endif
 
 #endif // BLINK_H
+
+int pinMode(int pin, pinmode_t mode);
+
+int digitalRead(int pin);
+
+int digitalWrite(int pin, enum digital_value_t value);

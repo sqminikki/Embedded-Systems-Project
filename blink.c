@@ -1,33 +1,39 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <signal.h>
+#include <stdlib.h>
 
 #include "blink.h"
-// #include "wiringx.h"
+#include "wiringx.h"
+
+#define LOW 0
+#define HIGH 1 << 24
 
 // Fill in the three functions to
 // 1.) enable the output mode for onboard LED
 // 2.) set the led to high
 // 3.) set the led to low
 
+int DUO_LED = 25;
 // Write code to enable led
 void initialize_led()
 {
     // Code to initialize gpio port for LED
-    // int pinMode(int pin, pinmode_t mode);
-    // pinMode(DUO_LED, OUTPUT);
-    // int digitalRead(int pin);
-    // int digitalWrite(int pin, enum digital_value_t value);
+    pinMode(DUO_LED, PINMODE_OUTPUT);
 }
 
 // Write code to turn led on
 void turn_on_led()
 {
     // Code to turn on the LED
+    digitalWrite(DUO_LED, HIGH);
 }
 
 // Write code to turn led off
 void turn_off_led()
 {
     // Code to turn off the LED
+    digitalWrite(DUO_LED, LOW);
 }
 
 // This code that helps with testing

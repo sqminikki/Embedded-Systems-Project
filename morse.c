@@ -48,7 +48,7 @@ void translate_to_morse(const char *text, char *morseOutput, int morseOutputSize
         }
         else if (isalnum(text[i]))
         {
-            char *morse = char_to_morse(text[i]); // Get morse code for each charactor
+            const char *morse = char_to_morse(text[i]); // Get morse code for each charactor
             strcat(morseOutput, morse); // Add morse code for each charactor
             strcat(morseOutput, " "); // Add space between each morse code
             outputIndex += strlen(morse) + 1; // Increment the outputIndex by the length of the morse code + 1

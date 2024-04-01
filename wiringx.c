@@ -6,14 +6,15 @@
 
 int main()
 {
-    int DUO_LED = 25;
+    int DUO_LED = 25; //If 25 doesn't work, try 24...
 
+    int wiringXSetup("duo", NULL);
+
+    
     if (wiringXSetup("duo", NULL) == -1)
     {
         printf("Failed to initialize wiringX\n");
-       
         wiringXGC();
-
         return -1;
     }
 
