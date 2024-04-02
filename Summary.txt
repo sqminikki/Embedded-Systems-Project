@@ -1,5 +1,0 @@
-Brief summary:
-
-This code takes in English characters and converts each character to its Morse code equivalent, and then prints them to the MilkV-Duo console. 
-
-Challenges we faced as a duo team was mostly getting our respective computers to work...
