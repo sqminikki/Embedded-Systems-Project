@@ -103,12 +103,13 @@ void test_MorseTiming(void)
     // Translate "SOS" to Morse code
     char output[150];
     translate_to_morse("SOS", output, sizeof(output) - 1);
-
+    printf("Morse Code: %s\n", output);
+    
     // Blink LED according to Morse code
     morse_blink_led(output);
 
-    // printf("mock_delay_called: %d\n", mock_delay_called);
-    // printf("mock_delay_duration: %d\n", mock_delay_duration);
+    printf("mock_delay_called: %d\n", mock_delay_called);
+    printf("mock_delay_duration: %d\n", mock_delay_duration);
 
     // Expected values
     int expected_delay_calls = 17;

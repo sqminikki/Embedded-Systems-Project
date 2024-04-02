@@ -4,10 +4,10 @@
 #include <stdlib.h>
 
 #include "blink.h"
-#include "wiringx.h"
+#include <wiringx.h>
 
-#define LOW 0
-#define HIGH 1 << 24
+// #define LOW 0
+// #define HIGH 1 << 24
 
 // Fill in the three functions to
 // 1.) enable the output mode for onboard LED
@@ -18,7 +18,18 @@ int DUO_LED = 25;
 // Write code to enable led
 void initialize_led()
 {
+    printf("Initialize LED\n");
+
     // Code to initialize gpio port for LED
+    // Initialize WiringX library for the `duo`
+    if(wiringXSetup("duo", NULL) == -1) 
+    {
+        // Release resources if there's an error
+        // during intialization.
+        wiringXGC();
+        return;
+    }
+    printf("Setting up LED\n");
     pinMode(DUO_LED, PINMODE_OUTPUT);
 }
 

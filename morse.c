@@ -67,31 +67,62 @@ void translate_to_morse(const char *text, char *morseOutput, int morseOutputSize
 
 void morse_blink_led(const char *morseCode)
 {
-    // Blink LED based on the timing needed
-    // 1 Unit = 1 Second
+    INIT_LED(); // Initialize the LED
+    for(int i = 0; i < strlen(morseCode); i++) // Loop through the morse code to blink the LED
+    {
+        if (morseCode[i] == '.')
+        {
+            LED_HIGH(); // Turn on the LED
+            DELAY(1); // Delay for 1 second
+            LED_LOW(); // Turn off the LED
+            DELAY(1); // Delay for 1 second
+        }
+        else if (morseCode[i] == '-')
+        {
+            LED_HIGH(); // Turn on the LED
+            DELAY(3); // Delay for 3 seconds
+            LED_LOW(); // Turn off the LED
+        }
+        else if (morseCode[i] == '/') //Space between words.
+        {
+            DELAY(7); // Delay for 7 seconds
+        }
+        else if (morseCode[i] == ' ')
+        {
+            DELAY(3); // Delay for 3 seconds
+        }
+        else
+        {
+            DELAY(1); // Delay for 1 second
+        }
+    }
 
-    if (morseCode == ".")
-    {
-        LED_HIGH();
-        DELAY(1);
-        LED_LOW();
-        DELAY(1);
-    }
-    else if (morseCode == "-")
-    {
-        LED_HIGH();
-        DELAY(3);
-        LED_LOW();
-        DELAY(1);
-    }
-    else if (morseCode == "/")
-    {
-        DELAY(3);
-    }
-    else
-    {
-        DELAY(1);
-    }
+        // INIT_LED(); // Initialize the LED
+        // // Blink LED based on the timing needed
+        // // 1 Unit = 1 Second
+
+        // if (morseCode == ".")
+        // {
+        //     LED_HIGH();
+        //     DELAY(1);
+        //     LED_LOW();
+        //     DELAY(1);
+        // }
+        // else if (morseCode == "-")
+        // {
+        //     LED_HIGH();
+        //     DELAY(3);
+        //     LED_LOW();
+        //     DELAY(1);
+        // }
+        // else if (morseCode == "/")
+        // {
+        //     DELAY(3);
+        // }
+        // else
+        // {
+        //     DELAY(1);
+        // }
     // Use LED_HIGH() to turn on led
     // Use LED_LOW() to turn off led
 
